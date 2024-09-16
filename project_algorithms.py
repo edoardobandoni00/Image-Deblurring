@@ -533,8 +533,10 @@ tolerance = 0
 
 # TOY EXAMPLE
 
+# File path of your device for the toy example
+file_path = 'Desktop/Magistrale/Python/example.png'
 # Sharp image
-A = np.array(Image.open('Desktop/Magistrale/Python/example.png'))
+A = np.array(Image.open(file_path))
 
 a = A[:,362:413,0]
 img = Image.fromarray(A)
@@ -612,11 +614,11 @@ for y in range(0, height, 3):
 
 plt.show()
 
-
 ## REAL EXAMPLE
-"""
+# File path of your device for the real example
+file_path = 'Desktop/Magistrale/Python/io.jpg'
 # Read an image
-A = np.array(Image.open('Desktop/Magistrale/Python/io.jpg'))
+A = np.array(Image.open(file_path))
 img = Image.fromarray(A)
 img.show()
 b = blur(A,psf,k)
@@ -625,4 +627,3 @@ image1 = Image.fromarray(b)
 image2 = Image.fromarray(c)
 image1.show()
 image2.show()
-"""
